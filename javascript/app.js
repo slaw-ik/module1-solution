@@ -27,17 +27,20 @@
     function ShoppingListCheckOffService() {
         var service = this,
             toBuyItems = [{
-                name: 'item1',
-                quantity: 10
+                name: 'coffee',
+                quantity: 1
             }, {
-                name: 'item2',
-                quantity: 20
+                name: 'bread',
+                quantity: 1
             }, {
-                name: 'item3',
-                quantity: 30
+                name: 'apple',
+                quantity: 4
             }, {
-                name: 'item4',
-                quantity: 40
+                name: 'banana',
+                quantity: 5
+            }, {
+                name: 'milk',
+                quantity: 2
             }],
             alreadyBoughtItems = [];
 
