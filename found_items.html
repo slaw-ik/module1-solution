@@ -1,0 +1,11 @@
+<div ng-if="foundCtrl.noItems();" class="alert alert-info" role="alert">
+    <h3>Nothing found</h3>
+</div>
+<ol class="list-group">
+    <li ng-repeat="item in foundCtrl.foundItems" class="list-group-item">
+        {{ item.quantity }} of {{ item.name }}
+        <button ng-click="foundCtrl.onRemove({index: $index});" class="btn btn-sm btn-danger pull-right"
+                style="margin-top: -5px;">Don't want this one!
+        </button>
+    </li>
+</ol>
