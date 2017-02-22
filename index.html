@@ -1,34 +1,31 @@
 <!doctype html>
-<html lang="en" ng-app="NarrowItDownApp">
+<html lang="en" ng-app="MenuApp">
 <head>
-    <title>Narrow Down Your Menu Choice</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="styles/bootstrap.min.css">
-    <link rel="stylesheet" href="styles/styles.css">
+  <title>Narrow Down Your Menu Choice</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles/bootstrap.min.css">
+  <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
-<div class="container" ng-controller="NarrowItDownController as ctrl">
-    <h1>Narrow Down Your Chinese Menu Choice</h1>
+<ui-view></ui-view>
 
-    <div class="row">
-        <div class="form-group col-sm-12">
-            <input type="text" placeholder="search term" class="form-control" ng-model="ctrl.searchTerm">
-            <div class="narrow-button">
-                <button class="btn btn-primary" ng-click="ctrl.getMatchedMenuItems(ctrl.searchTerm);">Narrow It Down For
-                    Me!
-                </button>
-            </div>
-        </div>
+<!-- Libraries -->
+<script src="javascript/lib/angular.min.js"></script>
+<script src="javascript/lib/angular-ui-router.min.js"></script>
 
-        <div class="row">
-            <div class="col-sm-10">
-                <!-- found-items should be implemented as a component -->
-                <found-items found-items="ctrl.found" on-remove="ctrl.removeItem(index)"></found-items>
-            </div>
-        </div>
-    </div>
+<!-- Modules -->
+<script src="javascript/src/menuapp.module.js"></script>
+<script src="javascript/src/data.module.js"></script>
+<script src="javascript/src/categoriesList.controller.js"></script>
+<script src="javascript/src/itemList.controller.js"></script>
 
-    <script src="javascript/angular.min.js"></script>
-    <script src="javascript/app.js"></script>
+<!-- Routes -->
+<script src="javascript/src/routes.js"></script>
+
+<!-- 'ShoppingList' module artifacts -->
+<script src="javascript/src/items.component.js"></script>
+<script src="javascript/src/categories.component.js"></script>
+<script src="javascript/src/menudata.service.js"></script>
+
 </body>
 </html>
